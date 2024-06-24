@@ -4,15 +4,15 @@ import { TypeAnimation as Typing } from 'react-type-animation';
 const TypeAnimation = () => {
   return (
     <h1 className='mb-5 text-2xl leading-tight text-center md:text-left dark:text-neutral-200 text-gray-900'>
-      ¡Yo puedo
+      ¡Soy 
       <Typing
         sequence={[
           750,
-          ' planificarlo!',
+          ' Lucas Roman!',
           750,
-          ' diseñarlo!',
+          ' Programador!',
           750,
-          ' desarrollarlo!'
+          ' tu proxima eleccion!'
         ]}
         wrapper='span'
         speed={50}
