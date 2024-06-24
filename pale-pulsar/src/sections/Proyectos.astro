@@ -1,0 +1,160 @@
+---
+import Image from "astro/components/Image.astro";
+import Express from "../components/icons/Express.astro";
+import JWT from "../components/icons/JWT.astro";
+import Material from "../components/icons/Material.astro";
+import Node from "../components/icons/Node.astro";
+import React from "../components/icons/React.astro";
+import SWR from "../components/icons/SWR.astro";
+import Sequelize from "../components/icons/Sequelize.astro";
+import Vite from "../components/icons/Vite.astro";
+
+const TAGS = {
+  EXPRESS: {
+    name: "Express",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: Express,
+  },
+  JWT: {
+    name: "JWT",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: JWT,
+  },
+  MATERIAL: {
+    name: "Material UI",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: Material,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: Node,
+  },
+  React: {
+    name: "React",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: React,
+  },
+  Sequelize: {
+    name: "Sequelize",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: Sequelize,
+  },
+  SWR: {
+    name: "SWR",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: SWR,
+  },
+  VITE: {
+    name: "Vite",
+    class: "text-gray-900 dark:text-gray-200",
+    icon: Vite,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "KobotoolBox - Api Conector",
+    description:
+      "Creacion de Aplicacion clone de KobotoolBox, haciendo backen API REST y fornt.",
+    link: "https://saltacoders.com",
+    github: "",
+    image: "/assets/proyecto.png",
+    tagsFrontend: [TAGS.React, TAGS.MATERIAL, TAGS.SWR, TAGS.VITE],
+    tagsBackend: [TAGS.NODE, TAGS.EXPRESS, TAGS.Sequelize, TAGS.JWT],
+  }
+];
+---
+
+<>
+  <div class="mt-2 sm:mt-8 mb-3 px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl sm:text-center">
+      <h2
+        class="font-bold text-3xl text-gray-900 sm:text-5xl dark:text-gray-200"
+      >
+        Mis <span class="text-blue-600">proyectos</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-6 flex justify-center">
+    {
+      PROJECTS.map(
+        ({
+          title,
+          description,
+          link,
+          github,
+          image,
+          tagsBackend,
+          tagsFrontend,
+        }) => (
+          <article class="w-full flex flex-col my-12 space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+              <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <Image
+                  loading="eager"
+                  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  src={image}
+                  width="400"
+                  height="400"
+                  alt={description}
+                />
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                {title}
+              </h3>
+              <div class="flex flex-wrap flex-col mt-2">
+                <h3 class="text-sm font-bold text-gray-800 dark:text-gray-100">
+                  Frontend
+                </h3>
+                <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
+                  {tagsFrontend.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1`}
+                      >
+                        <tag.icon class="size-6" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <h3 class="text-sm font-bold text-gray-800 dark:text-gray-100">
+                  Backend
+                </h3>
+                <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
+                  {tagsBackend.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1`}
+                      >
+                        <tag.icon class="size-6" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div class="mt-2 text-gray-700 dark:text-gray-400">
+                  {description}
+                </div>
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  <a
+                    href={link}
+                    class=" inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+                  >
+                    Preview
+                  </a>
+                </footer>
+              </div>
+            </div>
+          </article>
+        ),
+      )
+    }
+  </div>
+</>

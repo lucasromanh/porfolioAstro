@@ -1,0 +1,22 @@
+---
+const personalImageAlt = "Lucas Roman";
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row my-12">
+  <div class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1 md:w-[50%]">
+    <p>
+      Mi nombre es <span class="text-blue-600 dark:text-blue-500">LUCAS ROMAN</span>, tengo 38 años. He trabajado en varios proyectos y estudiado en varios institutos. Actualmente estoy por finalizar la Tecnicatura de Desarrollo de Software en la Upateco, además de haber finalizado varios cursos de formación avanzada en Python, React, y PHP.
+    </p>
+    <p>
+      Además, he creado una start-up llamada <span class="text-blue-600 dark:text-blue-500">SaltaCoders</span>, puramente formada por programadores freelance. Mi historia recién empieza y quiero construirla contigo. ¡Trabajemos juntos!
+    </p>
+  </div>
+
+  <img
+    width="200"
+    height="200"
+    src="/assets/image.png"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl border-zinc-300 border-l-[6px] border-t-[4px] border-r-[3px] border-b-[1px]"
+  />
+</article>

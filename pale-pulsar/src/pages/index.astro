@@ -1,156 +1,29 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../sections/Hero.astro";
+import Experience from "../sections/Experience.astro";
+import Proyectos from "../sections/Proyectos.astro";
+import SobreMi from "../sections/SobreMi.astro";
+import BgColor from "../components/BgColor.astro";
 ---
 
-<html lang="es">
-  <head>
-    <title>Lucas Roman - Desarrollador y CEO de SaltaCoders</title>
-  </head>
-  <body>
-    <Navbar />
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h1>¿Has Soñado con tu sitio web?</h1>
-          <h2>¡Yo puedo <span>desarrollarlo</span>!</h2>
-        </div>
-        <img src="/assets/image.png" alt="Desarrollador" class="hero-image">
-      </section>
-      <section class="focus">
-        <h2>Los pilares de mi enfoque</h2>
-        <p>Forjando experiencias digitales duraderas a través del tiempo.</p>
-        <div class="steps">
-          <div class="step">
-            <h3>Step 1</h3>
-            <h4>Planificación</h4>
-            <p>Mi enfoque no es meramente implementación técnica, sino construir bases sólidas que perduren en el tiempo.</p>
-          </div>
-          <div class="step">
-            <h3>Step 2</h3>
-            <h4>Diseño</h4>
-            <p>Estoy aquí para ofrecerte soluciones que destaquen y generen un impacto duradero en tu audiencia.</p>
-          </div>
-          <div class="step">
-            <h3>Step 3</h3>
-            <h4>Desarrollo</h4>
-            <p>Más allá de solo escribir código, estoy comprometido a comprender tus necesidades y objetivos.</p>
-          </div>
-        </div>
-      </section>
-      <section class="professional">
-        <h2>Mi trayectoria <span>profesional</span></h2>
-        <div class="stats">
-          <div class="stat">
-            <h3>+3</h3>
-            <p>Años de Experiencia</p>
-          </div>
-          <div class="stat">
-            <h3>1</h3>
-            <p>Cliente Satisfecho</p>
-          </div>
-          <div class="stat">
-            <h3>1</h3>
-            <p>Proyecto Finalizado</p>
-          </div>
-          <div class="stat">
-            <h3>0</h3>
-            <p>Proyecto en Curso</p>
-          </div>
-        </div>
-        <div class="experience">
-          <h4>Full Stack en Pablo San</h4>
-          <p>Enero 2021 - Febrero 2024</p>
-          <p>El proyecto Pablo San representa un ejemplo destacado de mi capacidad para liderar y ejecutar proyectos full stack de manera efectiva.</p>
-          <p>Me enorgullece el resultado final que logré y estoy emocionado por las futuras oportunidades de colaboración y desarrollo.</p>
-        </div>
-      </section>
-      <section class="projects">
-        <h2>Mis <span>proyectos</span></h2>
-        <div class="project">
-          <img src="/assets/proyecto.png" alt="Proyecto">
-          <div class="project-info">
-            <h3>Pablo San - Administrador de prestamos personales</h3>
-            <p>Frontend: React, Material UI, SWR, Vite</p>
-            <p>Backend: Node.js, Express, Sequelize, JWT</p>
-            <a href="#" class="button">Preview</a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout
+  title="Portafolio de Lucas Roman - Desarrollador web con 2 años de experiencia"
+  description="Contrata a Lucas Roman para crear tu aplicación web. Desarrollador Web."
+>
+  <main class="space-y-20 flex flex-col w-full">
+    <Hero />
 
-<style>
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  background: #1a202c;
-  color: #fff;
-}
-.hero-content {
-  max-width: 50%;
-}
-.hero-content h1 {
-  font-size: 3rem;
-}
-.hero-content h2 {
-  font-size: 2rem;
-  margin-top: 1rem;
-}
-.hero-content span {
-  color: #007bff;
-}
-.hero-image {
-  max-width: 40%;
-}
-.focus {
-  text-align: center;
-  padding: 2rem;
-}
-.focus .steps {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
-}
-.steps .step {
-  max-width: 30%;
-}
-.professional {
-  background: #1a202c;
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-.professional .stats {
-  display: flex;
-  justify-content: space-around;
-}
-.stats .stat {
-  text-align: center;
-}
-.projects {
-  text-align: center;
-  padding: 2rem;
-}
-.projects .project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.project-info {
-  margin-left: 1rem;
-}
-.button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 0.25rem;
-}
-</style>
+    <section id="experiencia">
+      <Experience />
+    </section>
+
+    <section id="proyectos">
+      <Proyectos />
+    </section>
+
+    <section id="sobre-mi">
+      <SobreMi />
+    </section>
+  </main>
+</Layout>
