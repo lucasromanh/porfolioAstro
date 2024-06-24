@@ -8,10 +8,10 @@ const { step, title } = Astro.props;
 ---
 
 <div
-  class="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4"
+  class="flex flex-col space-y-2 md:pb-0 md:pl-0 md:pt-0"
 >
   <span
-    class="text-md font-medium text-amber-400 dark:text-amber-300 tracking-wide"
+    class="text-md font-medium text-amber-400 dark:text-amber-300 "
   >
     {step}
   </span>
@@ -21,7 +21,7 @@ const { step, title } = Astro.props;
     <span class="text-xl font-semibold dark:text-white">
       {title}
     </span>
-    <span class="mt-2 text-zinc-700 dark:text-zinc-200/90 tracking-widest">
+    <span class="mt-2 text-zinc-700 dark:text-zinc-200/90 ">
       <slot />
     </span>
   </div>
