@@ -1,0 +1,55 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <title>Proyectos - Lucas Roman</title>
+    <link rel="stylesheet" href="/pale-pulsar/src/styles/global.css">
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <section class="projects">
+        <h1>Mis Proyectos</h1>
+        <div class="project">
+          <img src="/assets/proyecto1.png" alt="Proyecto 1">
+          <div class="project-info">
+            <h3>Pablo San - Administrador de préstamos personales</h3>
+            <p>Frontend: React, Material UI, SWR, Vite</p>
+            <p>Backend: Node.js, Express, Sequelize, JWT</p>
+            <a href="#" class="button">Preview</a>
+          </div>
+        </div>
+        <!-- Añadir más proyectos de la misma manera -->
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+.projects {
+  text-align: center;
+  padding: 2rem;
+}
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.project-info {
+  margin-left: 1rem;
+}
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+</style>

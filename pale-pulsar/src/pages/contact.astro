@@ -1,0 +1,41 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <title>Contacto - Lucas Roman</title>
+    <link rel="stylesheet" href="/styles/global.css">
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <section class="contact">
+        <h1>Contacto</h1>
+        <p>Puedes contactarme a través de los siguientes medios:</p>
+        <ul>
+          <li>Email: lucas@example.com</li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/lucasroman/">Lucas Roman</a></li>
+          <li>GitHub: <a href="https://github.com/lucasromanh">LucasRomanH</a></li>
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+.contact {
+  text-align: center;
+  padding: 2rem;
+}
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+.contact li {
+  margin-bottom: 1rem;
+}
+</style>
