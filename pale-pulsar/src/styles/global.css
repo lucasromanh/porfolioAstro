@@ -3,3 +3,8 @@
 @tailwind utilities;
 
 /* Tus estilos personalizados aquí */
+img {
+    mask-image: linear-gradient(
+      black 80%, 
+      transparent)
+  }
